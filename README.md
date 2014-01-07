@@ -21,11 +21,11 @@ If you are using the Puppet Labs PostgreSQL module, you can configure WAL-E as s
 
 ## Testing
 
-Like the module, the `Vagrantfile` is opinionated. You will need to pass a `PUPPET_HOME` variable with the directory to the following Puppet modules:
-    * apt
-    * concat
-    * firewall
-    * postgresql
-    * stdlib
+Like the module, the `Vagrantfile` is opinionated. You will need to pass a `PUPPET_HOME` variable with the directory to the following Puppet Labs modules:
+* apt
+* concat
+* firewall
+* postgresql
+* stdlib
 
 For example, `PUPPET_HOME=~/path/to/puppet vagrant up` will start a Ubuntu box and setup WAL-E.
