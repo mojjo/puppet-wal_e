@@ -29,7 +29,7 @@
 #
 # === Authors
 #
-# Justin Downing <justin@downing.us
+# Justin Downing <justin@downing.us>
 #
 # === Copyright
 #
@@ -39,7 +39,7 @@ class wal_e (
   $role       = 'slave',
   $rootdir    = '/etc/wal-e.d',
   $pgdata     = '/var/lib/postgresql/9.2/main',
-  $version    = 'present',
+  $master     = undef,
   $access_key = undef,
   $secret_key = undef,
   $s3_prefix  = undef,
@@ -54,10 +54,9 @@ class wal_e (
   include wal_e::deps
 
   package { 'wal-e':
-    ensure   => $version,
+    name     => 'git+https://github.com/wal-e/wal-e',
     provider => 'pip',
     require  => Class['wal_e::deps'],
-    #require  => Package['python-pip'],
   }
 
   file { [$rootdir, "${rootdir}/env"]:
