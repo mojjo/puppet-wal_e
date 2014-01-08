@@ -1,13 +1,18 @@
 require 'spec_helper'
 
 describe 'wal_e', :type => 'class' do
-  let(:facts) { { :osfamily => 'Debian' } }
+  let(:facts) do
+    {
+      :osfamily => 'Debian',
+      :concat_basedir => '/tmp'
+    }
+  end
 
   it { should contain_class('wal_e::deps') }
   it { should contain_class('wal_e::slave') }
 
   it do  should contain_package('wal-e').with(
-    'ensure'   => 'present',
+    'name'     => 'git+https://github.com/wal-e/wal-e',
     'provider' => 'pip',
   ) end
 
