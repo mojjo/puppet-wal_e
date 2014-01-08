@@ -1,5 +1,5 @@
 name    'jdowning/wal_e'
-version '0.2.0'
+version '0.2.1'
 source 'https://github.com/justindowning/puppet-wal_e'
 author 'Justin Downing'
 license 'Apache License, Version 2.0'
