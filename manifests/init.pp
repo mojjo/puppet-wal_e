@@ -67,16 +67,19 @@ class wal_e (
   file { "${rootdir}/env/AWS_ACCESS_KEY_ID":
     ensure  => file,
     content => $access_key,
+    require => File["${rootdir}/env"],
   }
 
   file { "${rootdir}/env/AWS_SECRET_ACCESS_KEY":
     ensure  => file,
     content => $secret_key,
+    require => File["${rootdir}/env"],
   }
 
   file { "${rootdir}/env/WALE_S3_PREFIX":
     ensure  => file,
     content => $s3_prefix,
+    require => File["${rootdir}/env"],
   }
 
   File {
