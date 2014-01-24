@@ -5,4 +5,5 @@ puppetversion = ENV.key?('PUPPET_VERSION') ? "= #{ENV['PUPPET_VERSION']}" : ['>=
 gem 'rake'
 gem 'puppet', puppetversion
 gem 'puppet-lint'
+gem 'puppet-blacksmith'
 gem 'puppetlabs_spec_helper'
