@@ -1,6 +1,6 @@
 # puppet-wal_e
 
-[![Build Status](https://travis-ci.org/justindowning/puppet-wal_e.png)](https://travis-ci.org/justindowning/puppet-wal_e)
+[![Puppet Forge](http://img.shields.io/puppetforge/v/jdowning/wal_e.svg)](https://forge.puppetlabs.com/jdowning/wal_e) [![Build Status](https://travis-ci.org/justindowning/puppet-wal_e.png)](https://travis-ci.org/justindowning/puppet-wal_e)
 
 ## Description
 
