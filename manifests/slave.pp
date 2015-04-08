@@ -10,7 +10,7 @@ class wal_e::slave {
 
   # if we have a db master host, turn on hot standby
   if $wal_e::master {
-    $standby_mode = "standby_mode = 'on'\nprimary_conninfo = 'host=${wal_e::master} port=5432'\ntrigger_file = '/var/lib/postgresql/9.2/tmp/pg_failover_trigger'\n"
+    $standby_mode = "standby_mode = 'on'\nprimary_conninfo = 'host=${wal_e::master} port=5432'\ntrigger_file = '${wall_e::pgdata}/pg_failover_trigger'\n"
     concat::fragment { 'standby_mode':
       target  => $recovery,
       content => $standby_mode,
