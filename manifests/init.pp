@@ -43,6 +43,7 @@ class wal_e (
   $access_key = undef,
   $secret_key = undef,
   $s3_prefix  = undef,
+  $retain_limit = 5,
 ) {
 
   if $role == 'master' {
