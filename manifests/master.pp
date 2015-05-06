@@ -7,7 +7,7 @@ class wal_e::master {
     hour    => '8',
   }
   cron { 'wal_e-delete-retain':
-    command => "/usr/bin/envdir ${wal_e::rootdir}/env /usr/local/bin/wal-e delete --confirm retain 5",
+    command => "/usr/bin/envdir ${wal_e::rootdir}/env /usr/local/bin/wal-e delete --confirm retain ${wal_e::retain_limit}",
     user    => 'postgres',
     minute  => '0',
     hour    => '9',
