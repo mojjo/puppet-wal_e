@@ -39,6 +39,7 @@ class wal_e (
   $role       = 'slave',
   $rootdir    = '/etc/wal-e.d',
   $pgdata     = '/var/lib/postgresql/9.2/main',
+  $branch     = 'master',
   $master     = undef,
   $access_key = undef,
   $secret_key = undef,
@@ -55,7 +56,7 @@ class wal_e (
   include wal_e::deps
 
   package { 'wal-e':
-    name     => 'git+https://github.com/wal-e/wal-e',
+    name     => 'git+https://github.com/wal-e/wal-e@${branch}',
     provider => 'pip',
     require  => Class['wal_e::deps'],
   }
